@@ -1,7 +1,7 @@
 import { vertexShader, fragmentShader } from "./shaders.js";
 
 const config = {
-  logoPath: "./assets/img/logo_light.png",
+  logoPath: "./assets/img/logo.png",
   logoSize: 1250,
   logoColor: "#404040",
   canvasBg: "#1a1a1a",
