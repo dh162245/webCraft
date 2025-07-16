@@ -15,17 +15,16 @@
     src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
   ></script>
 <!-- load Lenis -->
-<script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis/dist/lenis.min.js"></script>
 <!-- load GSAP core + ScrollTrigger -->
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
 
-  <script src="assets/js/script.js"></script>
+  <script type="module" src="assets/js/script.js"></script>
   </head>
   <body>
-    <!-- <div class="loader">
+    <div class="loader">
       <div class="overlay">
         <div class="block"></div>
         <div class="block"></div>
@@ -66,7 +65,7 @@
           <div class="digit"><h1>9</h1></div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <div class="container">
       <div class="hero-img">
@@ -78,17 +77,17 @@
           <a href="#">DH WebCraft</a>
         </div>
         <div class="nav-links">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Projects</a>
-          <a href="#">Contact</a>
+          <a href="#" class="scroll-to-header">Home</a>
+          <a href="#" class="scroll-to-about">About</a>
+          <!-- <a href="#">Projects</a> -->
+          <a href="#" class="scroll-to-contact">Contact</a>
         </div>
         <div class="btn">
           <span id="clock"></span>
         </div>
       </div>
 
-      <div class="header">
+      <div class="header" id="header">
         <div class="hero-copy">
           <div class="line">
             <h1>Moderne Websites für Unternehmen</h1>
@@ -106,9 +105,109 @@
         </p>
         </div>
       </div>
-
-  
     </div>
+    <section class="cards" id="about">
+        <div class="card card-1">
+          <div class="card-marquee">
+            <div class="marquee">
+              <h1>Design Beyond Boundaries</h1>
+              <h1> DH</h1>
+              <h1> WebCraft</h1>
+              <h1> Built for Tomorrow</h1>
+            </div>
+          </div>
+          <div class="card-wrapper card-wrapper-1">
+            <div class="card-content card-content-1">
+              <!-- <div class="card-title card-title-1">
+                <h1 class="h1-1">Curved Horizon</h1>
+              </div> -->
+              <div class="card-description card-description-1">
+                <p class="p-1">
+                    Ich gestalte moderne, responsive Webseiten, die Ihre Marke perfekt präsentieren, und begleite Ihr Projekt von der Idee bis zum Launch.
+                </p>
+              </div>
+            </div>
+            <div class="card-img card-img-1">
+              <img src="assets/img/card-img-1.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="card card-2">
+          <div class="card-wrapper">
+            <div class="card-content">
+              <div class="card-title" id="hide-1">
+                <h1>[01]</h1>              
+            </div>
+              <div class="wrapper">
+                <div class="card-title">
+                <h1>Webdesign</h1>              
+            </div>
+            <div class="card-img">
+              <img src="assets/img/card-img-2.jpg" alt="" />
+            </div>
+            <div class="card-description">
+                <p>
+                    Visuell beeindruckende und benutzerfreundliche Webdesigns erstellen, die Besucher ansprechen.
+                </p>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-3">
+            <div class="card-wrapper">
+              <div class="card-content">
+                <div class="card-title" id="hide-2">
+                  <h1 class="h1-3">[02]</h1>              
+              </div>
+                <div class="wrapper">
+                  <div class="card-title">
+                  <h1 class="h1-3">Frontend-Entwicklung</h1>              
+              </div>
+              <div class="card-img">
+                <img src="assets/img/card-img-3.jpg" alt="" />
+              </div>
+              <div class="card-description">
+                  <p class="p-3">
+                    Moderne, performante Webseiten mit HTML, CSS & JavaScript – immer responsive und cross-browser-kompatibel.
+                  </p>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        <div class="card card-4">
+            <div class="card-wrapper">
+              <div class="card-content">
+                <div class="card-title" id="hide-3">
+                  <h1 class="h1-4">[03]</h1>              
+              </div>
+                <div class="wrapper">
+                  <div class="card-title">
+                  <h1 class="h1-4">End-to-End-Abwicklung</h1>              
+              </div>
+              <div class="card-img">
+                <img src="assets/img/card-img-4.jpg" alt="" />
+              </div>
+              <div class="card-description">
+                  <p class="p-4">
+                    Ganzheitliche Betreuung: Von der ersten Idee über Design & Umsetzung bis zum Live-Gang und laufenden Updates.
+                  </p>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <div class="outro" id="contact">
+        <!-- <div class="outro-img">
+            <img src="assets/img/outro.png" alt="">
+        </div> -->
+        <div class="outro-description">
+            <h1>info@dh-webcraft.de</h1>
+            <h1>+49 176 80301988</h1>
+        </div>
+      </div>
     
     
     <script type="module" src="assets/js/ripple.js"></script>

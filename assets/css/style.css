@@ -1,5 +1,10 @@
 @import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@font-face {
+    font-family: "nm";
+    src: url('../fonts/nm/nm-medium.otf');
+}
 
 * {
   margin: 0;
@@ -30,16 +35,19 @@ h1 span {
   font-style: italic;
   -webkit-font-smoothing: antialiased;
 }
-
-a,
-p {
+.nav a,
+.header p {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
+  font-family: "nm";
   font-size: 12px;
   font-weight: 500;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
+}
+.header h1{
+    font-family: "nm";
 }
 
 .container {
@@ -49,24 +57,28 @@ p {
   overflow: hidden;
 }
 
+
 .hero-img {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 100svh;
-  overflow: hidden;
-  z-index: -1;
-}
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100svh;
+    overflow: hidden;
+    z-index: -1;
+  }
 
 .nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100vw;
   padding: 1.25em 1.5em;
   display: flex;
   align-items: center;
+  color: #fff;
   gap: 1.5em;
   will-change: transform;
+  mix-blend-mode: difference;
+  z-index: 10;
 }
 
 .nav > div {
@@ -104,7 +116,7 @@ p {
 .header {
   width: 100%;
   height: 100%;
-  padding-top: 25svh;
+  padding-top: 35svh;
   display: flex;
   flex-direction: column;
   align-items: last baseline;
@@ -237,6 +249,7 @@ p {
   animation: spin 1s linear infinite;
 }
 
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -315,14 +328,254 @@ p {
   will-change: transform;
 }
 
+
+
+img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    will-change: transform;
+  }
+  
+ 
+  
+  section {
+    position: relative;
+    width: 100vw;
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+  
+ 
+
+  
+  
+  .cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 25svh;
+  }
+  
+  .card-marquee {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    overflow: hidden;
+  }
+  
+  .card-marquee .marquee {
+    display: flex;
+  }
+  
+  .card-marquee .marquee h1 {
+    white-space: nowrap;
+    font-size: 7vw;
+    font-weight: 600;
+    margin-right: 30px;
+    font-family: "PP Editorial Old";
+}
+  
+  .card {
+    position: relative;
+    width: 100vw;
+    height: 100svh;
+    padding: 1.5em;
+  }
+  
+  .card-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    will-change: transform;
+  }
+  
+ 
+
+  
+  .wrapper{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5em;
+  }
+
+
+
+  .card-img {
+    width: 100%;
+    /* border-radius: 150px; */
+    overflow: hidden;
+  }
+  
+  .card-img-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vmax;
+    height: 100vmax;
+    transform: translate(-50%, -50%) scale(0.3);
+    border-radius: 50%;
+    opacity: 0.2;
+    overflow: hidden;
+    will-change: transform, border-radius;
+  }
+  
+
+  .card-img img {
+    transform: scale(2);
+  }
+  
+  .card-content{
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+  
+ 
+
+  .card-title h1{
+    font-size: 5.5rem;
+    font-family: "DM Mono", monospace;
+    mix-blend-mode: difference;
+    color: #000;
+  }
+
+
+
+  
+  .card-description p{
+    font-size: 2rem;
+    font-family: "nm";
+    line-height: 1;
+    font-weight: 600;
+    color: #000;
+    /* text-transform: uppercase; */
+  }
+
+
+  .card-content-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 1;
+  }
+  .card-content-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-content-1 .card-title-1 {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .card-description-1 p{
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  .card-content-1 .card-description-1 {
+    text-align: center;
+    width: 40%;
+    margin-bottom: 3em;
+    position: relative;
+    transform: translateX(40px);
+    opacity: 0;
+  }
+ 
+  .card-2, .card-3{
+    background-color: #fff;
+  }
+  .card-4{
+    background-color: #1a1a1a;
+  }
+  .card:nth-child(2) {
+    margin-top: 50vh;
+  }
+  
+  .char {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .char span {
+    transform: translateX(100%);
+    display: inline-block;
+    will-change: transform;
+  }
+  
+  
 .hero-img {
-  transform: scale(1.5);
-  will-change: transform;
+    transform: scale(1.5);
+    will-change: transform;
+  }
+  
+.outro{
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.outro-img{
+    width: 400px;
+    height: 400px;
+    margin-bottom: 30px;
+}
+
+.outro-img img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.outro-description h1{
+    line-height: 2;
+    font-family: "PP Editorial Old";
+    font-style: italic;
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.card-4 p, .card-4 h1{
+    color: #fff;
+}
+
+
 @media (max-width: 900px) {
+
+    #word-1{
+        margin-right: 13px;
+    }
+
+  .hero-copy{
+    width: 100%;
+  }
+  .header{
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: bottom;
+    margin: 0;
+    padding-left: 1em;
+  }
   h1 {
-    font-size: 2.5rem;
+    font-size: 26px;
   }
 
   .nav-links {
@@ -332,4 +585,35 @@ p {
   .cta {
     width: 90%;
   }
+  .card-content .card-description {
+    width: 90%;
 }
+  .card-title h1{
+    font-size: 32px;
+  }
+  .card-description p{
+    font-size: 18px;
+  }
+  .card-description-1 p{
+    font-size: 24px;
+  }
+  .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 1.3em; */
+  }
+  
+  #hide-1, #hide-2, #hide-3{
+    display: none;
+  }
+  .outro-description h1{
+    font-size: 22px;
+  }
+}
+
+
+
+
+
